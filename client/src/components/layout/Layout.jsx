@@ -26,7 +26,7 @@ const Layout = () => {
   };
 
   const lookForLogin = async () => {
-    const users = await axios.get("http://localhost:3001/getUsers");
+    const users = await axios.get("http://localhost:3000/getUsers");
     users.data.forEach((user) => {
       if (user.current === true) {
         setLoggedIn(true);

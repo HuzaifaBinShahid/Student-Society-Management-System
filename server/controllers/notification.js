@@ -1,7 +1,11 @@
-const mailjet = require("node-mailjet").connect(
-  process.env.MAILAPIKEY1,
-  process.env.MAILSECRETKEY1
-);
+let mailjet = null;
+if (process.env.MAILAPIKEY1 && process.env.MAILSECRETKEY1) {
+  mailjet = require("node-mailjet").connect(
+    process.env.MAILAPIKEY1,
+    process.env.MAILSECRETKEY1
+  );
+}
+
 const dateTime = require("date-and-time");
 require("./hooks/pirate.js")();
 const template = require("./index.html");
