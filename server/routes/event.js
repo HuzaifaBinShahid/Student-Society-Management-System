@@ -11,4 +11,4 @@ router.get("/getevents", eventController.getEvents)
 router.put("/updateevent", eventController.updateEvent)
 
 
-module.exports = router
+module.exports = router;

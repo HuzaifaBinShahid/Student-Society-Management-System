@@ -99,10 +99,10 @@ class App extends Component {
       this.props.passData(true);
       window.location.reload();
       console.log("Log In Successful!");
-      await axios.post("/notification/send", {
-        email: user.data.userMail,
-        by: user.data.userName,
-      });
+      // await axios.post("/notification/send", {
+      //   email: user.data.userMail,
+      //   by: user.data.userName,
+      // });
     } else {
       this.setState({ error: "Authentication Not Successfull!" });
     }
